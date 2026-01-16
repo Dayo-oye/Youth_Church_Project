@@ -231,6 +231,7 @@ body {
   padding: 1.5rem;
 }
 
+
 /* Responsive */
 @media (min-width: 768px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
