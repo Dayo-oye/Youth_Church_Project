@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - MFM Caaso Youth Church</title>
+    <link rel="icon" href="Assets/icons/Caaso_logo-removebg-preview.ico" type="image/x-icon" />
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page specific overlay fix since we aren't using the massive home header */
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(76, 29, 149, 0.8), rgba(30, 41, 59, 0.9));
+            z-index: 1;
+            border-radius: 0 0 40px 40px;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Mobile fix for contact grid */
+        @media(max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                padding-top: 6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="nav-container" style="top: 0; margin-top: 0; margin-bottom: 0;">
+        <div class="container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#upcoming">Programs</a>
+                <a href="index.html#live-program">Outreach</a>
+                <a href="index.html#testimonies">Testimonies</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &nbsp;/&nbsp; Contact
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section white-bg">
+            <div class="container">
+
+                <div class="contact-grid">
+                    <!-- Left Column: Contact Info -->
+                    <div class="contact-info-wrapper animate-on-scroll">
+                        <div class="section-title-center" style="text-align: left; margin-bottom: 1.5rem;">
+                            <h3 style="margin-bottom: 0.5rem;">Get in Touch</h3>
+                            <p>We'd love to hear from you. Reach out to us with any questions or prayer requests.</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Visit Us</h4>
+                                <p>MFM CAASO Region 17 HQ<br>Caaso Bus stop, 16 Suberu Oje Rd, Alagbado, Lagos 102213,<br>Lagos State, Nigeria.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+2348031867487">+234 803 186 7487</a><br><a
+                                        href="tel:+2348141698503">+234 814 169 8503</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:mfmcaasoyouthchurch@gmail.com">mfmcaasoyouthchurch@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card" style="margin-top: 1rem; background: var(--light-bg); border: none;">
+                            <div class="contact-card-content" style="width: 100%;">
+                                <h4 style="margin-bottom: 1rem;">Connect on Social Media</h4>
+                                <div style="display: flex; gap: 1rem; font-size: 1.5rem;">
+                                    <a href="https://www.facebook.com/p/MFM-Caaso-Youth-Church-61552205264453/"
+                                        target="_blank" style="color: var(--primary);"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/mfmcaasoyc/" target="_blank"
+                                        style="color: #E1306C;"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://x.com/Mfmcaasoyc" target="_blank"
+                                        style="color: var(--dark-text);"><i class="fab fa-twitter"></i></a>
+                                    <a href="http://www.youtube.com/@MFMCaasoyc" target="_blank"
+                                        style="color: #FF0000;"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Form -->
+                    <div class="form-container animate-on-scroll"
+                        style="margin: 0; width: 100%; max-width: 100%; padding: 2.5rem;">
+                        <h3 style="margin-bottom: 1.5rem;">Send a Message</h3>
+                        <form id="contactForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label" for="contact-name">Your Name</label>
+                                    <input type="text" id="contact-name" class="form-input"
+                                        placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="contact-phone">Phone Number</label>
+                                    <input type="tel" id="contact-phone" class="form-input"
+                                        placeholder="Enter your phone">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" class="form-input" placeholder="Enter your email"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-subject">Subject</label>
+                                <select id="contact-subject" class="form-input" style="height: auto;">
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Prayer Request">Prayer Request</option>
+                                    <option value="Counseling">Counseling</option>
+                                    <option value="Partnership">Partnership/Giving</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-message">Message</label>
+                                <textarea id="contact-message" class="form-textarea" placeholder="How can we help you?"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Google Map -->
+                <div class="map-container animate-on-scroll">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.977232264567!2d3.268673323565578!3d6.649740521684701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b96434446059b%3A0xe1043376722216ea!2sMountain%20Of%20Fire%20and%20Miracle%20Ministries%2C%20Caaso%20Regional%20Hqtrs!5e0!3m2!1sen!2sng!4v1709664426543!5m2!1sen!2sng"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="Assets/Images/Caaso_logo-removebg-preview.png" alt="MFM CAASO Logo" class="footer-logo">
+                    <div class="mt-2">
+                        <a href="https://maps.app.goo.gl/eBKy8NdtrCf4UQc78" target="_blank" class="btn btn-primary">Join
+                            Us Today</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Service Times</a></li>
+                        <li><a href="index.html#upcoming">Programs</a></li>
+                        <li><a href="index.html#giving">Giving</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <a href="https://maps.app.goo.gl/eBKy8NdtrCf4UQc78" target="_blank">CAASO Church Auditorium,
+                                Lagos</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span><a href="https://wa.me/2348031867487" target="_blank">+2348031867487</a>, <a
+                                    href="https://wa.me/2348141698503" target="_blank">+2348141698503</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <a href="mailto:mfmcaasoyouthchurch@gmail.com">mfmcaasoyouthchurch@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-verse">"They devoted themselves to the apostles' teaching and to fellowship, to the
+                    breaking of bread and to prayer." <strong>Acts 2:42</strong></p>
+                <p>© 2026 MFM CAASO Youth Church. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+
+</html>

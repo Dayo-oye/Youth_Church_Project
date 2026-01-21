@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,866 +9,13 @@
   <!-- Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* CSS Reset & Base Styles */
-    :root {
-      --primary: #4c1d95;
-      --primary-light: #6d28d9;
-      --primary-dark: #3c1a70;
-      --secondary: #312e81;
-      --secondary-light: #4338ca;
-      --accent: #f59e0b;
-      --accent-light: #fbbf24;
-      --light-bg: #f8fafc;
-      --light-card: #ffffff;
-      --dark-text: #1e293b;
-      --medium-text: #475569;
-      --light-text: #64748b;
-      --white: #ffffff;
-      --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-      --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
-      --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.08);
-      --border-radius: 16px;
-      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-      --gradient-accent: linear-gradient(135deg, var(--accent), #ea580c);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--dark-text);
-      background-color: var(--light-bg);
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    h2 {
-      font-size: 2.2rem;
-      color: var(--primary-dark);
-    }
-
-    h3 {
-      font-size: 1.8rem;
-      color: var(--primary);
-      position: relative;
-      display: inline-block;
-      margin-bottom: 2rem;
-    }
-
-    h3::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 60px;
-      height: 4px;
-      background: var(--gradient);
-      border-radius: 2px;
-    }
-
-    h4 {
-      font-size: 1.4rem;
-      color: var(--primary);
-    }
-
-    p {
-      margin-bottom: 1.2rem;
-      color: var(--medium-text);
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: var(--transition);
-    }
-
-    ul {
-      list-style-position: inside;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .section {
-      padding: 5rem 0;
-    }
-
-    .section-title-center {
-      text-align: center;
-      margin-bottom: 3.5rem;
-    }
-
-    .section-title-center h3::after {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .light-bg {
-      background-color: var(--light-bg);
-    }
-
-    .white-bg {
-      background-color: var(--white);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.9rem 2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: var(--transition);
-      border: none;
-      text-align: center;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .btn-primary {
-      background: var(--gradient);
-      color: var(--white);
-      box-shadow: 0 5px 15px rgba(76, 29, 149, 0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(76, 29, 149, 0.4);
-    }
-
-    .btn-accent {
-      background: var(--gradient-accent);
-      color: var(--white);
-      box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
-    }
-
-    .btn-accent:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
-    }
-
-    /* Header Styles */
-    .header {
-      background: linear-gradient(rgba(28, 14, 54, 0.85), rgba(28, 14, 54, 0.9)), url('Assets/Images/header-bg.jpg.jpg') no-repeat center center/cover;
-      color: var(--white);
-      padding: 2rem 0 6rem;
-      position: relative;
-      overflow: hidden;
-      border-radius: 0 0 40px 40px;
-    }
-
-    .header::before {
-      content: '';
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(108, 99, 255, 0.2) 0%, transparent 70%);
-      top: -150px;
-      right: -100px;
-      z-index: 0;
-    }
-
-    .header::after {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
-      bottom: -80px;
-      left: -80px;
-      z-index: 0;
-    }
-
-    .header-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 2rem;
-    }
-
-    /* Logo Animation */
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotateY(0); }
-      50% { transform: translateY(-15px) rotateY(10deg); }
-    }
-
-    @keyframes glow {
-      0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
-      50% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); }
-    }
-
-    .logo-container {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logo {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 5px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      animation: float 6s ease-in-out infinite, glow 4s ease-in-out infinite;
-      object-fit: contain;
-      background-color: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(5px);
-    }
-
-    .logo-ring {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border: 2px dashed rgba(255, 255, 255, 0.4);
-      border-radius: 50%;
-      animation: spin 20s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .header-text {
-      max-width: 900px;
-    }
-
-    .header h1 {
-      font-size: 3.2rem;
-      background: linear-gradient(to right, #ffffff, #fbbf24);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 0.5rem;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    .header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 400;
-      margin-bottom: 1rem;
-      animation: fadeInUp 1s ease-out 0.2s both;
-    }
-
-    .tagline {
-      font-size: 1.3rem;
-      color: var(--accent-light);
-      font-style: italic;
-      position: relative;
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 30px;
-      backdrop-filter: blur(10px);
-      animation: fadeInUp 1s ease-out 0.4s both;
-    }
-
-    /* Navigation */
-    .nav-container {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background-color: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-      border-radius: 0 0 20px 20px;
-      margin-top: -40px;
-      margin-bottom: 3rem;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 1.2rem 0;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .nav a {
-      padding: 0.8rem 1.5rem;
-      margin: 0 0.3rem;
-      font-weight: 600;
-      color: var(--primary);
-      border-radius: 50px;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .nav a::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--gradient);
-      border-radius: 50px;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.5s ease;
-      z-index: -1;
-    }
-
-    .nav a:hover {
-      color: var(--white);
-    }
-
-    .nav a:hover::before {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
-    .nav a.active {
-      background: var(--gradient);
-      color: var(--white);
-      box-shadow: 0 5px 15px rgba(76, 29, 149, 0.3);
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.8rem;
-      color: var(--primary);
-      cursor: pointer;
-      padding: 0.5rem;
-    }
-
-    /* Cards */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: var(--light-card);
-      border-radius: var(--border-radius);
-      padding: 2.5rem 2rem;
-      box-shadow: var(--shadow-card);
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(0, 0, 0, 0.03);
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 5px;
-      height: 100%;
-      background: var(--gradient);
-      transition: width 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .card:hover::before {
-      width: 10px;
-    }
-
-    .card-icon {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-      display: inline-block;
-    }
-
-    /* Service Times */
-    .service-times {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .service-item {
-      display: flex;
-      align-items: center;
-      padding: 1.5rem;
-      background: var(--white);
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-    }
-
-    .service-item:hover {
-      transform: translateX(10px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .service-icon {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-right: 1.5rem;
-      min-width: 60px;
-      text-align: center;
-    }
-
-    .service-details {
-      flex: 1;
-    }
-
-    .service-details h4 {
-      margin-bottom: 0.5rem;
-    }
-
-    .service-details p {
-      color: var(--light-text);
-      margin-bottom: 0.5rem;
-    }
-
-    .whatsapp-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #25D366;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-      font-weight: 600;
-      margin-top: 0.5rem;
-      transition: var(--transition);
-    }
-
-    .whatsapp-link:hover {
-      background: #128C7E;
-      transform: translateY(-2px);
-    }
-
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      height: 250px;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 1.5rem;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-      color: white;
-      transform: translateY(20px);
-      opacity: 0;
-      transition: var(--transition);
-    }
-
-    .gallery-item:hover .gallery-overlay {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    /* Form */
-    .form-container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: var(--white);
-      border-radius: var(--border-radius);
-      padding: 3rem;
-      box-shadow: var(--shadow);
-    }
-
-    .form-group {
-      margin-bottom: 1.8rem;
-    }
-
-    .form-label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
-
-    .form-input, .form-textarea {
-      width: 100%;
-      padding: 1rem 1.2rem;
-      border: 2px solid #e2e8f0;
-      border-radius: 10px;
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      transition: var(--transition);
-      background-color: var(--light-bg);
-    }
-
-    .form-input:focus, .form-textarea:focus {
-      outline: none;
-      border-color: var(--primary-light);
-      box-shadow: 0 0 0 3px rgba(76, 29, 149, 0.1);
-    }
-
-    .form-textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--primary-dark);
-      color: var(--white);
-      padding: 4rem 0 2rem;
-      border-radius: 40px 40px 0 0;
-      margin-top: 5rem;
-    }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
-      margin-bottom: 3rem;
-    }
-
-    .footer-logo {
-      width: 120px;
-      margin-bottom: 1.5rem;
-      border-radius: 50%;
-      border: 3px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .footer-heading {
-      color: var(--white);
-      font-size: 1.4rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-bottom: 0.8rem;
-    }
-
-    .footer-heading::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: var(--accent);
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 0.8rem;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.8);
-      transition: var(--transition);
-    }
-
-    .footer-links a:hover {
-      color: var(--accent-light);
-      padding-left: 5px;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .contact-icon {
-      color: var(--accent);
-      font-size: 1.2rem;
-      width: 30px;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .footer-verse {
-      font-style: italic;
-      margin-bottom: 1rem;
-      color: var(--accent-light);
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .animate-on-scroll.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-      h1 { font-size: 2.5rem; }
-      h2 { font-size: 2rem; }
-      h3 { font-size: 1.6rem; }
-      
-      .header h1 {
-        font-size: 2.8rem;
-      }
-      
-      .header h2 {
-        font-size: 1.6rem;
-      }
-      
-      .logo {
-        width: 150px;
-        height: 150px;
-      }
-      
-      .logo-ring {
-        width: 170px;
-        height: 170px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--white);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        padding: 1rem 0;
-        border-radius: 0 0 20px 20px;
-      }
-
-      .nav.active {
-        display: flex;
-      }
-
-      .nav a {
-        margin: 0.5rem 1rem;
-        text-align: center;
-      }
-
-      .mobile-menu-btn {
-        display: block;
-        position: absolute;
-        right: 1.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .nav-container {
-        padding: 0 1rem;
-      }
-
-      .header-content {
-        padding-top: 1rem;
-      }
-
-      .header h1 {
-        font-size: 2.2rem;
-      }
-
-      .header h2 {
-        font-size: 1.4rem;
-      }
-
-      .tagline {
-        font-size: 1.1rem;
-      }
-
-      .section {
-        padding: 3.5rem 0;
-      }
-
-      .form-container {
-        padding: 2rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .container {
-        padding: 0 1rem;
-      }
-
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.7rem; }
-      h3 { font-size: 1.4rem; }
-      
-      .header h1 {
-        font-size: 1.8rem;
-      }
-      
-      .header {
-        padding: 1.5rem 0 4rem;
-        border-radius: 0 0 30px 30px;
-      }
-      
-      .logo {
-        width: 120px;
-        height: 120px;
-      }
-      
-      .logo-ring {
-        width: 140px;
-        height: 140px;
-      }
-      
-      .cards, .gallery {
-        grid-template-columns: 1fr;
-      }
-      
-      .service-item {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .service-icon {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-      
-      .footer {
-        border-radius: 30px 30px 0 0;
-      }
-    }
-
-    /* Utility Classes */
-    .text-center {
-      text-align: center;
-    }
-
-    .mt-1 { margin-top: 1rem; }
-    .mt-2 { margin-top: 2rem; }
-    .mt-3 { margin-top: 3rem; }
-    .mt-4 { margin-top: 4rem; }
-    .mb-1 { margin-bottom: 1rem; }
-    .mb-2 { margin-bottom: 2rem; }
-    .mb-3 { margin-bottom: 3rem; }
-    .mb-4 { margin-bottom: 4rem; }
-
-    /* Giving Section Styling */
-    .giving-details {
-      background: var(--white);
-      border-radius: var(--border-radius);
-      padding: 2.5rem;
-      box-shadow: var(--shadow);
-      margin-top: 2rem;
-    }
-
-    .detail-item {
-      display: flex;
-      align-items: center;
-      padding: 1.2rem 0;
-      border-bottom: 1px solid #f1f5f9;
-    }
-
-    .detail-item:last-child {
-      border-bottom: none;
-    }
-
-    .detail-label {
-      font-weight: 600;
-      color: var(--primary);
-      min-width: 180px;
-    }
-
-    .detail-value {
-      color: var(--dark-text);
-      font-weight: 500;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Header Section -->
   <header class="header">
@@ -900,7 +48,7 @@
         <a href="#testimonies">Testimonies</a>
         <a href="#giving">Giving</a>
         <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </div>
@@ -915,7 +63,9 @@
         </div>
         <div class="text-center animate-on-scroll">
           <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
-            Welcome to MFM CAASO Youth Church, Upperroom Tabernacle. We are a vibrant community committed to prayer, the Word of God, and raising a generation of youths who are passionate about God's kingdom. Our mission is to equip young people with spiritual tools to impact their world for Christ.
+            Welcome to MFM CAASO Youth Church, Upperroom Tabernacle. We are a vibrant community committed to prayer, the
+            Word of God, and raising a generation of youths who are passionate about God's kingdom. Our mission is to
+            equip young people with spiritual tools to impact their world for Christ.
           </p>
           <div class="mt-3">
             <a href="#services" class="btn btn-primary">Join Our Services</a>
@@ -938,7 +88,8 @@
             <div class="service-details">
               <h4>Sunday Service</h4>
               <p>Sunday | 7:25AM (WAT)</p>
-              <a href="https://maps.app.goo.gl/eBKy8NdtrCf4UQc78" target="_blank">Join us for worship, prayer, and the Word of God.</p>
+              <a href="https://maps.app.goo.gl/eBKy8NdtrCf4UQc78" target="_blank">Join us for worship, prayer, and the
+                Word of God.</a>
             </div>
           </div>
           <div class="service-item animate-on-scroll">
@@ -949,7 +100,8 @@
               <h4>Bible Study</h4>
               <p>Tuesday's | 8:00PM (WAT)</p>
               <p>Deep dive into God's Word for spiritual growth and understanding.</p>
-              <a href="https://chat.whatsapp.com/LIDaxZjSIspEdEcX0RgZwJ" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+              <a href="https://chat.whatsapp.com/LIDaxZjSIspEdEcX0RgZwJ" target="_blank" rel="noopener noreferrer"
+                class="whatsapp-link">
                 <i class="fab fa-whatsapp"></i> Click here to join
               </a>
             </div>
@@ -961,7 +113,7 @@
             <div class="service-details">
               <h4>Prayer Meeting</h4>
               <p>Daily | 9:00PM (WAT)</p>
-              Powerful prayer sessions to strengthen your spiritual life.</p>
+              <p>Powerful prayer sessions to strengthen your spiritual life.</p>
             </div>
           </div>
         </div>
@@ -1019,7 +171,8 @@
           <h3>Outreach & Community Programs</h3>
         </div>
         <p class="text-center mb-4" style="max-width: 800px; margin: 0 auto;">
-          We believe in showing the love of Christ through practical outreach, care, and support to our community and beyond.
+          We believe in showing the love of Christ through practical outreach, care, and support to our community and
+          beyond.
         </p>
         <div class="cards">
           <div class="card animate-on-scroll">
@@ -1058,21 +211,24 @@
             <div class="card-icon">
               <i class="fas fa-star"></i>
             </div>
-            <p>"I had been suffering from a persistent illness for months, but during the prayer meeting, I felt God's healing power touch me. I've been completely healed ever since!"</p>
+            <p>"I had been suffering from a persistent illness for months, but during the prayer meeting, I felt God's
+              healing power touch me. I've been completely healed ever since!"</p>
             <strong>— Sarah T., Youth Member</strong>
           </div>
           <div class="card animate-on-scroll">
             <div class="card-icon">
               <i class="fas fa-star"></i>
             </div>
-            <p>"My faith and spiritual life have grown tremendously since joining this youth church. The teachings are practical and the community is supportive and loving."</p>
+            <p>"My faith and spiritual life have grown tremendously since joining this youth church. The teachings are
+              practical and the community is supportive and loving."</p>
             <strong>— David K., Youth Member</strong>
           </div>
           <div class="card animate-on-scroll">
             <div class="card-icon">
               <i class="fas fa-star"></i>
             </div>
-            <p>"Through the mentorship program, I found direction for my life and career. God used this church to bring clarity to my purpose."</p>
+            <p>"Through the mentorship program, I found direction for my life and career. God used this church to bring
+              clarity to my purpose."</p>
             <strong>— Joy M., Youth Member</strong>
           </div>
         </div>
@@ -1119,7 +275,8 @@
         </div>
         <div class="text-center animate-on-scroll">
           <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem;">
-            "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." <br><strong>2 Corinthians 9:7</strong>
+            "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion,
+            for God loves a cheerful giver." <br><strong>2 Corinthians 9:7</strong>
           </p>
         </div>
         <div class="giving-details animate-on-scroll">
@@ -1161,7 +318,8 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="testimony">Your Testimony / Message</label>
-              <textarea id="testimony" class="form-textarea" placeholder="Share what God has done in your life..." required></textarea>
+              <textarea id="testimony" class="form-textarea" placeholder="Share what God has done in your life..."
+                required></textarea>
             </div>
             <div class="text-center">
               <button type="submit" class="btn btn-accent">Submit Testimony</button>
@@ -1183,14 +341,16 @@
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <h4>Location</h4>
-            <a href="https://maps.app.goo.gl/eBKy8NdtrCf4UQc78" target="_blank">CAASO Church Auditorium <br>Lagos, Nigeria</a>
+            <a href="https://maps.app.goo.gl/eBKy8NdtrCf4UQc78" target="_blank">CAASO Church Auditorium <br>Lagos,
+              Nigeria</a>
           </div>
           <div class="card animate-on-scroll">
             <div class="card-icon">
               <i class="fas fa-phone"></i>
             </div>
             <h4>Phone</h4>
-            <a href="https://wa.me/2348031867487" target="_blank">+234 803 186 7487</a> <br><a href="https://wa.me/2348031867487" target="_blank">+234 814 169 8503</a>
+            <a href="https://wa.me/2348031867487" target="_blank">+234 803 186 7487</a> <br><a
+              href="https://wa.me/2348141698503" target="_blank">+234 814 169 8503</a>
           </div>
           <div class="card animate-on-scroll">
             <div class="card-icon">
@@ -1198,7 +358,6 @@
             </div>
             <h4>Email</h4>
             <a href="mailto:mfmcaasoyouthchurch@gmail.com">mfmcaasoyouthchurch@gmail.com</a>
-            <!-- <p>prayer@mfmyouthcaaso.org</p> -->
           </div>
         </div>
       </div>
@@ -1211,9 +370,9 @@
       <div class="footer-content">
         <div class="footer-section">
           <img src="Assets/Images/Caaso_logo-removebg-preview.png" alt="MFM CAASO Logo" class="footer-logo">
-          <!-- <p>MFM CAASO Youth Church, Upperroom Tabernacle. Raising a generation on fire for God through prayer, the Word, and fellowship.</p> -->
           <div class="mt-2">
-            <a href="https://maps.app.goo.gl/eBKy8NdtrCf4UQc78" target="_blank" class="btn btn-primary">Join Us Today</a>
+            <a href="https://maps.app.goo.gl/eBKy8NdtrCf4UQc78" target="_blank" class="btn btn-primary">Join Us
+              Today</a>
           </div>
         </div>
         <div class="footer-section">
@@ -1223,7 +382,7 @@
             <li><a href="#services">Service Times</a></li>
             <li><a href="#upcoming">Programs</a></li>
             <li><a href="#giving">Giving</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -1235,7 +394,8 @@
             </div>
             <div class="contact-item">
               <i class="fas fa-phone contact-icon"></i>
-              <a href="https://wa.me/2348031867487" target="_blank">+2348031867487 <a href="https://wa.me/2348141698503" target="_blank">+2348141698503</a>
+              <span><a href="https://wa.me/2348031867487" target="_blank">+2348031867487</a>, <a
+                  href="https://wa.me/2348141698503" target="_blank">+2348141698503</a></span>
             </div>
             <div class="contact-item">
               <i class="fas fa-envelope contact-icon"></i>
@@ -1245,96 +405,27 @@
           <div class="mt-2">
             <h4 class="footer-heading">Follow Us</h4>
             <div style="display: flex; gap: 1rem; font-size: 1.5rem;">
-              <a href="https://www.facebook.com/p/MFM-Caaso-Youth-Church-61552205264453/" target="_blank" style="color: rgba(255,255,255,0.8);"><i class="fab fa-facebook"></i></a>
-              <a href="https://www.instagram.com/mfmcaasoyc/" target="_blank" style="color: rgba(255,255,255,0.8);"><i class="fab fa-instagram"></i></a>
-              <a href="https://x.com/Mfmcaasoyc" target="_blank" style="color: rgba(255,255,255,0.8);"><i class="fab fa-twitter"></i></a>
-              <a href="http://www.youtube.com/@MFMCaasoyc" target="_blank" style="color: rgba(255,255,255,0.8);"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.facebook.com/p/MFM-Caaso-Youth-Church-61552205264453/" target="_blank"
+                style="color: rgba(255,255,255,0.8);"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/mfmcaasoyc/" target="_blank" style="color: rgba(255,255,255,0.8);"><i
+                  class="fab fa-instagram"></i></a>
+              <a href="https://x.com/Mfmcaasoyc" target="_blank" style="color: rgba(255,255,255,0.8);"><i
+                  class="fab fa-twitter"></i></a>
+              <a href="http://www.youtube.com/@MFMCaasoyc" target="_blank" style="color: rgba(255,255,255,0.8);"><i
+                  class="fab fa-youtube"></i></a>
             </div>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-verse">"They devoted themselves to the apostles' teaching and to fellowship, to the breaking of bread and to prayer." <strong>Acts 2:42</strong></p>
+        <p class="footer-verse">"They devoted themselves to the apostles' teaching and to fellowship, to the breaking of
+          bread and to prayer." <strong>Acts 2:42</strong></p>
         <p>© 2026 MFM CAASO Youth Church. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mainNav = document.getElementById('mainNav');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      mainNav.classList.toggle('active');
-      mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
-        ? '<i class="fas fa-times"></i>' 
-        : '<i class="fas fa-bars"></i>';
-    });
-    
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('active');
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-      });
-    });
-    
-    // Form submission
-    const testimonyForm = document.getElementById('testimonyForm');
-    testimonyForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      // Get form values
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const testimony = document.getElementById('testimony').value;
-      
-      // In a real application, you would send this data to a server
-      // For now, we'll just show a confirmation message
-      alert(`Thank you, ${name}! Your testimony has been submitted. We appreciate you sharing what God has done in your life.`);
-      
-      // Reset form
-      testimonyForm.reset();
-    });
-    
-    // Scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-    
-    // Observe all elements with the animate-on-scroll class
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
-      observer.observe(el);
-    });
-    
-    // Active navigation link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY + 100;
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          document.querySelector(`.nav a[href="#${sectionId}"]`).classList.add('active');
-        } else {
-          document.querySelector(`.nav a[href="#${sectionId}"]`).classList.remove('active');
-        }
-      });
-    });
-  </script>
+  <script src="Script.js"></script>
 </body>
+
 </html>
